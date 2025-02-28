@@ -20,7 +20,7 @@ class ProjectController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'name'   => 'required|string|max:255',
-            'status' => 'required|string',
+            // 'status' => 'required|string',
             'attributes' => 'array'
         ]);
 
@@ -30,7 +30,7 @@ class ProjectController extends Controller
 
         $project = Project::create([
             'name'   => $request->name,
-            'status' => $request->status,
+            // 'status' => $request->status,
         ]);
 
         // Save dynamic attributes
